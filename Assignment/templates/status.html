@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <body style="background-color:blue;"></body>
+    <title>Tom Tobin Home Environment Data</title>
+    <link href="https://mattduck.github.io/generic-css/css/generic-light.min.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <h1>Tom Tobin (Device1) Home Environment Data Summary</h1>
+
+    <h2>Temperature</h2>
+    <p><strong>Celcius:</strong> {{ celcius }}</p>
+    <p><strong>Fahrenheit:</strong> {{ fahrenheit }}</p>
+
+
+    <h2>Humidity</h2>
+    <p><strong>Humidity:</strong> {{ humidity }}</p>
+
+    <h2>Pressure</h2>
+    <p><strong>Pressure:</strong> {{ pressure }}</p>
+
+    <h2>IP</h2>
+    <p><strong>IP Address:</strong> {{ ip }}</p>
+
+    <h2>API Description</h2>
+    <p>For use by developers...</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Resource/Path</th>
+                <th>GET</th>
+                <th>POST</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>/sensehat/environment</td>
+                <td>Current environment data</td>
+                <td>Not Used</td>
+            </tr>
+            <tr>
+                <td>/sensehat/light</td>
+                <td>Current light state(i.e. on/off)</td>
+                <td>Change light state using status query parameter. <br>
+                    e.g. curl -X POST http://YOUR_PI_IP:5000/sensehat/light?state=on</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
